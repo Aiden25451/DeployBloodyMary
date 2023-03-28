@@ -37,6 +37,7 @@ III: HTTP, Port 80, 0.0.0.0/0
 - sudo nano gunicorn.conf
 
 - Save the following:
+
 [program:gunicorn]
 
 directory=/home/ubuntu/elevate
@@ -85,6 +86,7 @@ stdout_logfile=/var/log/gunicorn/gunicorn.out.log
 - sudo nano django.conf
 
 - Write the following inside:
+
 server{
 
   listen 80;
