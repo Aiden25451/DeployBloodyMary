@@ -38,12 +38,19 @@ III: HTTP, Port 80, 0.0.0.0/0
 
 - Save the following:
 [program:gunicorn]
+
 directory=/home/ubuntu/elevate
+
 command=/home/ubuntu/env/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/elevate/app.sock elevate.wsgi:application  
+
 autostart=true
+
 autorestart=true
+
 stderr_logfile=/var/log/gunicorn/gunicorn.err.log
+
 stdout_logfile=/var/log/gunicorn/gunicorn.out.log
+
 [group:guni] programs:gunicorn
 
 - sudo mkdir /var/log/gunicorn
@@ -79,17 +86,25 @@ stdout_logfile=/var/log/gunicorn/gunicorn.out.log
 
 - Write the following inside:
 server{
+
   listen 80;
+  
   server_name (INSTANCE PUBLIC IP ADDRESS);
 
    location / {
+   
       include proxy_params;
+      
       proxy_pass http://unix:/home/ubuntu/DeployBloodyMary/BloodyMary/app.sock;
+      
    }
 
     location /static/{
+    
       autoindex on;
+      
       alias /home/ubuntu/DeployBloodyMary/BloodyMary/static/;
+      
     }
 
 }
