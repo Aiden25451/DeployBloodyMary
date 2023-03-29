@@ -66,9 +66,9 @@ stdout_logfile=/var/log/gunicorn/gunicorn.out.log
 
 - cd nginx
 
-- sudo nano nginx.config
+- sudo nano nginx.conf
 
-- Inside the nginx.config, change www-data to root
+- Inside the nginx.conf, change www-data to root
 
 (EDITED to add static files)
 (HELP: https://wolfx.io/how-to-serve-static-and-media-files-in-nginx)
