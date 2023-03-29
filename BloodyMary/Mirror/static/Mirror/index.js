@@ -13,7 +13,7 @@ function myfunction() {
         setTimeout(function() {
             text.textContent = "";
             document.getElementsByClassName("text")[0].style.visibility = "visible";
-            document.getElementsByClassName("text")[0].style.fontSize = "2vw";
+            document.getElementsByClassName("text")[0].style.fontSize = "25px";
             document.getElementsByClassName("text")[0].style.paddingBottom = "400px";
             document.getElementById("ghost").style.width = "30vh";
             document.getElementById("ghost").style.marginTop = "40vh";
