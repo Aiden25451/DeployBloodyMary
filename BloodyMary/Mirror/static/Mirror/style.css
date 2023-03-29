@@ -1,3 +1,79 @@
 body {
-    background-color: aqua;
+    background-image: url("background.jpg");
+    
+    background-attachment: fixed;
+    background-position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    font-family: 'Times New Roman', serif;
+    /* position:absolute; */
+}
+
+img{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.button {
+    font-size:30px;
+    color:rgb(150, 0, 0);
+    padding:10px;
+    position:fixed;
+    z-index: 3;
+}
+
+.summon {
+    font-size: 7vw;
+    
+    color:rgb(150, 0, 0);
+    padding:10px;
+    position:fixed;
+    z-index: 3;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.mirror {
+    background-image: url("Bloody_mary_ghost.png");
+    position:fixed;
+    /* Set a specific height */
+    min-height: 100vh; 
+    min-width: 100vw;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+
+    z-index: 2;
+}
+
+
+img {
+    width: 0px;
+    /*position: absolute; */
+}
+
+.text {
+    visibility:hidden;
+    font-size: 0.1rem;
+    position:absolute;
+    z-index: 1;
+    background: none;
+    
+    text-align: center;
+    padding-right: 12vw;
+    padding-left: 12vw;
+    padding-bottom:0px;
+}
+  
+h1 {
+    color:rgb(150, 0, 0);
+    padding:10px;
+    font-size: 50px;
 }
