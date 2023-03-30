@@ -92,17 +92,17 @@ server{
 
   listen 80;
   server_name (INSTANCE PUBLIC IP ADDRESS);
-   location / {
+  location / {
    
       include proxy_params;
       proxy_pass http://unix:/home/ubuntu/DeployBloodyMary/BloodyMary/app.sock;
       
-   }
+  }
 
-    location /static/{
+  location /static/{
       autoindex on;
       alias /home/ubuntu/DeployBloodyMary/BloodyMary/static/;
-    }
+  }
 
 }
 
