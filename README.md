@@ -20,7 +20,7 @@ III: HTTP, Port 80, 0.0.0.0/0
 
 - source env/bin/activate
 
-- git clone (GITHUB URL).git
+- git clone https://github.com/Aiden25451/DeployBloodyMary.git
 
 - sudo apt-get install -y nginx
 
@@ -40,9 +40,9 @@ III: HTTP, Port 80, 0.0.0.0/0
 
 [program:gunicorn]
 
-directory=/home/ubuntu/elevate
+directory=/home/ubuntu/DeployBloodyMary/BloodyMary
 
-command=/home/ubuntu/env/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/elevate/app.sock elevate.wsgi:application  
+command=/home/ubuntu/env/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/DeployBloodyMary/BloodyMary/app.sock BloodyMary.wsgi:application  
 
 autostart=true
 
@@ -52,7 +52,8 @@ stderr_logfile=/var/log/gunicorn/gunicorn.err.log
 
 stdout_logfile=/var/log/gunicorn/gunicorn.out.log
 
-[group:guni] programs:gunicorn
+[group:guni] 
+programs:gunicorn
 
 - sudo mkdir /var/log/gunicorn
 
@@ -92,22 +93,22 @@ server{
   listen 80;
   
   server_name (INSTANCE PUBLIC IP ADDRESS);
-
-   location / {
+  
+  location / {
    
       include proxy_params;
       
       proxy_pass http://unix:/home/ubuntu/DeployBloodyMary/BloodyMary/app.sock;
       
-   }
+  }
 
-    location /static/{
-    
+  location /static/{
+  
       autoindex on;
       
       alias /home/ubuntu/DeployBloodyMary/BloodyMary/static/;
       
-    }
+  }
 
 }
 
