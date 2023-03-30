@@ -55,9 +55,16 @@ img{
 }
 
 
-img {
+#ghost {
     width: 0px;
     /*position: absolute; */
+}
+
+#mirror_top{
+    display: block;
+    margin-left: auto;
+    /* margin-right: auto; */
+    width:120vw;
 }
 
 .text {
@@ -65,11 +72,15 @@ img {
     font-size: 0.1rem;
     /* position:absolute; */
     z-index: 1;
-    background: none;
+    background-image: url("mirror_top.png");
+    background-repeat: no-repeat;
+    background-size:160vw 100vh;
+    background-position-x: -30vw;
+    background-position-y: -60vh;
     
     text-align: center;
-    padding-right: 12vw;
-    padding-left: 12vw;
+    padding-right: 8vw;
+    padding-left: 8vw;
     padding-bottom:0px;
 }
   
