@@ -20,7 +20,7 @@ III: HTTP, Port 80, 0.0.0.0/0
 
 - source env/bin/activate
 
-- git clone (GITHUB URL).git
+- git clone https://github.com/Aiden25451/DeployBloodyMary.git
 
 - sudo apt-get install -y nginx
 
