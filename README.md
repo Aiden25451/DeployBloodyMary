@@ -1,3 +1,5 @@
+Instructions to deploying a website to an AWS EC2 instance
+
 # DeployBloodyMary
 
 1: Create a new security group. Set three inbound rules.
